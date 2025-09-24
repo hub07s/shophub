@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Modern E-commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <h1>ShopHub</h1>
+                </div>
+                
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li><a href="#" class="nav__link active" data-page="home">Home</a></li>
+                        <li><a href="#" class="nav__link" data-page="products">Products</a></li>
+                        <li><a href="#" class="nav__link" data-page="categories">Categories</a></li>
+                        <li><a href="#" class="nav__link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__search">
+                    <input type="text" class="search__input" placeholder="Search products..." id="searchInput">
+                    <button class="search__btn" id="searchBtn">🔍</button>
+                </div>
+
+                <div class="header__actions">
+                    <button class="header__account">👤</button>
+                    <button class="header__cart" id="cartBtn">
+                        🛒
+                        <span class="cart__badge" id="cartBadge">0</span>
+                    </button>
+                </div>
+
+                <button class="header__menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Homepage -->
+        <section id="homepage" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__content">
+                        <h2 class="hero__title">Discover Amazing Products</h2>
+                        <p class="hero__subtitle">Shop the latest trends in electronics, fashion, and more</p>
+                        <button class="btn btn--primary hero__cta" data-page="products">Shop Now</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Products -->
+            <section class="featured-products">
+                <div class="container">
+                    <h2 class="section__title">Featured Products</h2>
+                    <div class="products__grid" id="featuredProducts">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="categories">
+                <div class="container">
+                    <h2 class="section__title">Shop by Category</h2>
+                    <div class="categories__grid" id="categoriesGrid">
+                        <!-- Categories will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter -->
+            <section class="newsletter">
+                <div class="container">
+                    <div class="newsletter__content">
+                        <h2 class="newsletter__title">Stay Updated</h2>
+                        <p class="newsletter__subtitle">Get the latest deals and product updates</p>
+                        <div class="newsletter__form">
+                            <input type="email" class="form-control newsletter__input" placeholder="Enter your email">
+                            <button class="btn btn--primary newsletter__btn">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Products Page -->
+        <section id="products-page" class="page">
+            <div class="container">
+                <div class="products-header">
+                    <h2 class="page__title">All Products</h2>
+                    <div class="products-controls">
+                        <select class="form-control filter-select" id="categoryFilter">
+                            <option value="">All Categories</option>
+                        </select>
+                        <select class="form-control filter-select" id="sortSelect">
+                            <option value="name">Sort by Name</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products__grid" id="allProducts">
+                    <!-- All products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Detail Page -->
+        <section id="product-detail" class="page">
+            <div class="container">
+                <button class="btn btn--outline back-btn" id="backBtn">← Back to Products</button>
+                <div class="product-detail" id="productDetailContent">
+                    <!-- Product detail will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar__header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-sidebar__close" id="closeSidebar">×</button>
+        </div>
+        <div class="cart-sidebar__content" id="cartContent">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-sidebar__footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="btn btn--primary btn--full-width cart-checkout">Checkout</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>ShopHub</h4>
+                    <p>Your trusted online shopping destination</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 ShopHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
