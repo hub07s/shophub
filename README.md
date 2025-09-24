@@ -1,2 +1,0 @@
-# shophub
-discover amazing products
